@@ -41,4 +41,8 @@ public class D {
     public void test_10() {
         System.out.println();
     }
+
+    public void test_11() {
+        System.out.println();
+    }
 }
