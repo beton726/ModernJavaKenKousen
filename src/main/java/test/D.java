@@ -37,4 +37,8 @@ public class D {
     public void test_9() {
         System.out.println();
     }
+
+    public void test_10() {
+        System.out.println();
+    }
 }
