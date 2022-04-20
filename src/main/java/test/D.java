@@ -9,4 +9,12 @@ public class D {
     public void test_2() {
         System.out.println();
     }
+
+    public void test_3() {
+        System.out.println();
+    }
+
+    public void test_4() {
+        System.out.println();
+    }
 }
