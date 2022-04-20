@@ -8,6 +8,12 @@ public class D {
         System.out.println(333);
     }
 
+    public void testAnton() {
+        System.out.println();
+        System.out.println(123);
+        System.out.println(333);
+    }
+
     public void test_5() {
         System.out.println();
     }
