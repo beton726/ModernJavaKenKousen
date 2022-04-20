@@ -4,7 +4,9 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -85,9 +87,43 @@ public class ChapterFirst {
         for (Person pers : personList) {
             System.out.println(pers.toString());
         }
+    }
+
+    @Test
+    public void workReturnSql() {
+        int count = 0;
+
+        List<String[]> listArr = new ArrayList<>();
+
+        listArr.add(new String[]{"TableName_1", "1"});
+        listArr.add(new String[]{"TableName_2", "2"});
+        listArr.add(new String[]{"TableName_3", "3"});
+        listArr.add(new String[]{"TableName_4", "3"});
+        listArr.add(new String[]{"TableName_5", "3"});
+
+        // e_1 в данном выбирает по очереди значения из списка. (.get(0))
+        //
+
+        listArr.stream()
+                .forEach(e_1 -> Arrays.stream(e_1).skip(1).mapToInt((s) -> Integer.parseInt(s)).toArray());
 
 
-//        System.out.println("Все объекты: " + Arrays.asList(personList));
+        List<Integer> arr = listArr.stream()
+                .map(e_1 -> Integer.parseInt(e_1[1]))
+                .collect(Collectors.toList());
+
+
+
+        int sum = listArr.stream()
+                .map(e_1 -> Integer.parseInt(e_1[1]))
+                .reduce(Integer::sum).orElse(0);
+
+        System.out.println(sum);
+
+
+        //        for (int i = 0; i < listArr.size(); i++) {
+//            String arr = listArr.get(i)[1];
+//        }
     }
 
 }
