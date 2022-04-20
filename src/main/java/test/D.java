@@ -25,4 +25,12 @@ public class D {
     public void test_7() {
         System.out.println();
     }
+
+    public void test_8() {
+        System.out.println();
+    }
+
+    public void test_9() {
+        System.out.println();
+    }
 }
