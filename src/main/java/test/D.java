@@ -33,4 +33,10 @@ public class D {
     public void test_9() {
         System.out.println();
     }
+
+    public void testAnton_2() {
+        System.out.println();
+        System.out.println(123);
+        System.out.println(333);
+    }
 }
